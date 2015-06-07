@@ -93,7 +93,13 @@ public class AddToDoActivity extends Activity {
 
 
 				// TODO - Indicate result and finish
-
+                Intent i = new Intent();
+                if (getParent() == null) {
+                    setResult(RESULT_CANCELED, null);
+                } else {
+                    getParent().setResult(ToDoManagerActivity.RESULT_CANCELED, null);
+                }
+                finish();
                 
                 
 			}
@@ -107,8 +113,9 @@ public class AddToDoActivity extends Activity {
 
 
 				// TODO - Reset data to default values
-
-
+                mTitleText.setText("");
+                mDefaultPriorityButton.setChecked(true);
+                mDefaultStatusButton.setChecked(true);
                 
                 
                 
