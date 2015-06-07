@@ -57,9 +57,9 @@ public class ToDoManagerActivity extends ListActivity {
 			return;
 		}
 		// TODO - Add footerView to ListView
-        setListAdapter();
-        ListView listView = getListView();
 
+        ListView listView = getListView();
+        listView.addFooterView(footerView);
 		
         
         
