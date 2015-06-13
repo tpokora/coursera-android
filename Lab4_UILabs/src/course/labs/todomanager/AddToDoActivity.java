@@ -137,15 +137,15 @@ public class AddToDoActivity extends Activity {
 
 
 				// TODO - Get the current Priority
-				Priority priority = null;
+				Priority priority = getPriority();
 
 				// TODO - Get the current Status
-				Status status = null;
+				Status status = getStatus();
 
 				// TODO - Get the current ToDoItem Title
 
 
-				String titleString = null;
+				String titleString = mTitleText.getText().toString();
 
 
 				// Construct the Date string
@@ -157,7 +157,8 @@ public class AddToDoActivity extends Activity {
 						fullDate);
 
 				// TODO - return data Intent and finish
-
+                setResult(Activity.RESULT_OK, data);
+                finish();
 
 
 
