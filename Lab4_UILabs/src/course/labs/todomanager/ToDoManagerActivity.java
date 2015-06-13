@@ -92,7 +92,7 @@ public class ToDoManagerActivity extends ListActivity {
         if (requestCode == ADD_TODO_ITEM_REQUEST) {
             if (resultCode == RESULT_OK) {
                 ToDoItem toDoItem = new ToDoItem(data);
-                
+                mAdapter.add(toDoItem);
             }
         }
 
